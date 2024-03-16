@@ -36,7 +36,7 @@ class ProductsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('products.show');
     }
 
     /**
@@ -44,7 +44,7 @@ class ProductsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('products.edit');
     }
 
     /**
