@@ -17,7 +17,7 @@
     <div class="relative h-[90vh] overflow-hidden">
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img src="{{ asset('assets/img/landing1.png') }}" class="w-full" alt="...">
+            <img src="{{ asset('assets/img/landing1.png') }}" class="w-full object-cover  h-full" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
