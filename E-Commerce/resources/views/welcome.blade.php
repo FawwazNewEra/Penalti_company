@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/futura" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
-</head>
-<body>
+@extends("layout.app")
+@section("main")
 <div class="bg-black text-center flex justify-center items-center h-[10vh]">
     <h1 class="text-white font-Futura font-medium text-2xl">A heart full of pride</h1>
 </div>
@@ -19,6 +10,7 @@
         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
             <img src="{{ asset('assets/img/landing1.png') }}" class="w-full object-cover  h-full" alt="...">
         </div>
+
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/components/image 11.jpg" class="w-full" alt="..">
@@ -108,8 +100,4 @@
 
     <div class="h-screen bg-red-200"></div>
     <div class="h-screen bg-red-700"></div>
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-</body>
-</html>
+@endsection
