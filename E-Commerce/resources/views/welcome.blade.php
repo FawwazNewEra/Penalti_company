@@ -6,6 +6,7 @@
 <div id="indicators-carousel" class="relative w-full h-[90vh]" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="relative h-[90vh] overflow-hidden">
+
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
             <img src="{{ asset('assets/img/landing1.png') }}" class="w-full object-cover  h-full" alt="...">
@@ -53,16 +54,20 @@
             <span class="sr-only">Next</span>
         </span>
     </button>
+    <div class="absolute z-30 top-[40vh] text-center left-[32vw] md:top-[32vh]">
+              <h1 class="text-[6vw] w-full text-white font-Font-Products">New Arrivals</h1>
+              <button class="bg-white opacity-80 font-bold px-4 py-2 rounded-md">Shop now</button>
+    </div>
 </div>
 
 
-<nav class="bg-black  w-full z-30 sticky top-0 start-0 border-b ">
+<nav class="bg-black  w-full z-30 sticky top-0 start-0 ">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <span class="self-center mr-1 sm:mr-0 text-xl font-Font-Products font-bold whitespace-nowrap text-white">Pinalti Company</span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-    <div class="gap-1 sm:gap-4 sm:flex flex">
+    <div class="gap-1 sm:gap-6 sm:flex flex">
     <button type="button" class="text-white font-Font-Products bg-black border border-white font-medium rounded-lg text-sm px-2 sm:px-4 py-2 text-center"><a href="{{ route ('login')}}">Login</a></button>
     <button type="button" class="text-black bg-white font-Font-Products font-medium rounded-lg text-sm px-2 sm:px-4  py-2 text-center"><a href="">Sign up</a></button>
     </div>
@@ -95,9 +100,17 @@
   </div>
 </nav>
 
+<div class="w-full relative md:p-6 bg-black">
+  <div class="relative overflow-hidden h-[80vh]">
+    <img style="object-position: 65% 10%;" class="object-cover w-full h-full" src="{{ asset('assets/img/landing2.png') }}" alt="">
+    <div class="absolute z-30 top-[36vh]  left-[7vw] md:top-[35vh]">
+              <h1 class="text-[4vw] sm:text-[3vw] lg:text-[3vw] xl:text-[2vw] sm:w-[600px] w-[325px] max-w-[60vw]  uppercase text-white font-Font-Products">Striped jacquard t-shirt x casa josephine</h1>
+              <button class="bg-white font-bold opacity-80 px-4 py-2 rounded-md">Shop now</button>
+    </div>
+  </div>
+</div>
 
-      
-
-    <div class="h-screen bg-red-200"></div>
-    <div class="h-screen bg-red-700"></div>
+<div>
+  
+</div>
 @endsection
