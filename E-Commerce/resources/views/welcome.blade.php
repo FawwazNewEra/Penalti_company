@@ -137,34 +137,31 @@
                   <div class="w-full gap-3 flex">
                     <div>
                     <label for="firstname" class="block mb-2 text-sm font-medium text-white">First Name</label>
-                    <input type="text" name="firstname" id="firstname" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2" placeholder="First Name">
+                    <input type="text" name="firstname" id="firstname" class="bg-transparent bg-[#464646] text-white text-sm block w-full p-2" placeholder="First Name">
                     </div>
                     <div>
                     <label for="lastname" class="block mb-2 text-sm font-medium text-white">Last Name</label>
-                    <input type="text" name="lastname" id="lastname" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2" placeholder="Last Name">
+                    <input type="text" name="lastname" id="lastname" class="bg-transparent bg-[#464646] text-white text-sm block w-full p-2" placeholder="Last Name">
                     </div>
                   </div>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-white">Email Address</label>
-                        <input type="email" name="email" id="email" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2" placeholder="Your Email" required />
+                        <input type="email" name="email" id="email" class=" bg-transparent text-white text-sm block w-full p-2" placeholder="Your Email" required />
                     </div>
                     <div>
                       <label class="block mb-2 text-sm font-medium text-white" for="number">Mobile Number</label>
-                      <input type="number" name="number" id="number" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2" placeholder="Your Email" required />
+                      <input type="number" name="number" id="number" class=" bg-transparent text-white text-sm block w-full p-2" placeholder="Your Email" required />
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2 " required />
+                        <input type="password" name="password" id="password" placeholder="••••••••" class=" bg-transparent bg-[#464646] text-white text-sm block w-full p-2 " required />
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Verifikasi Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2 " required />
+                        <input type="password" name="password" id="password" placeholder="••••••••" class=" bg-transparent text-white text-sm block w-full p-2 " required />
                     </div>
                     <div class="w-full text-center">
                     <button type="submit" class=" bg-white  font-medium rounded-sm text-sm px-5 py-2 text-center">Create an account</button>
-                    </div>
-                    <div class="text-sm text-center font-medium text-gray-500 dark:text-gray-300">
-                        Don't have account ? <a href="#" class="text-[#CF082D] underline ">Register</a>
                     </div>
                 </form>
             </div>
@@ -209,15 +206,15 @@
                   @csrf
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
-                        <input type="email" name="email" id="email" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2.5" placeholder="Your Email" required />
+                        <input type="email" name="email" id="email" class="bg-[#464646] border border-[#464646] bg-transparent text-white text-sm block w-full p-2.5" placeholder="Your Email" required />
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-[#464646] border border-[#464646] text-gray-900 text-sm block w-full p-2.5 " required />
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-[#464646] bg-transparent border border-[#464646] text-white text-sm block w-full p-2.5 " required />
                     </div>
                     <div class="flex justify-between">
                         <div class="flex items-start">
-                            <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                            <label for="remember" class="ms-2 text-sm font-medium text-white bg-transparent ">Remember me</label>
                         </div>
                         <a href="#" class="text-sm text-white hover:underline ">Forgot Password?</a>
                     </div>
