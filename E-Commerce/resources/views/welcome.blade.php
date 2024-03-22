@@ -69,7 +69,7 @@
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
     <div class="gap-1 sm:gap-6 sm:flex flex">
     <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button" class="text-white font-Font-Products bg-black border border-white font-medium rounded-lg text-sm px-2 sm:px-4 py-2 text-center"><a >Login</a></button>
-    <button type="button" class="text-black bg-white font-Font-Products font-medium rounded-lg text-sm px-2 sm:px-4  py-2 text-center"><a href="">Sign up</a></button>
+    <button data-modal-target="modal-register" data-modal-toggle="modal-register" type="button" class="text-black bg-white font-Font-Products font-medium rounded-lg text-sm px-2 sm:px-4  py-2 text-center"><a>Sign up</a></button>
     </div>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -100,25 +100,26 @@
   </div>
 </nav>
 
-
-<!-- Main modal -->
-<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<div id="modal-register" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden transition duration-300 ease-in-out fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full  max-w-md max-h-full">
         <!-- Modal content -->
         <div class="relative bg-[#151515] p-12 rounded-lg shadow ">
         <div class="">
-        <h1 class=" text-center font-bold text-3xl mb-8 text-white">Sign In</h1>
+        <h1 class=" text-center font-bold text-3xl mb-8 text-white">Sign Up</h1>
         <div>
           <a href="flex items-center">
             <div class="px-6 sm:px-0 max-w-sm">
     <button type="button" class=" w-full  bg-white hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-between mr-2 mb-2"><img class="w-4 h-4 mr-1" src="{{ asset('assets/img/google-icon.svg') }}" alt=""> Sign up with Google<div></div></button>
 </div>
-          </a>
-        </div>
-        <div class="flex w-full">
 
+<div class="flex mt-3 justify-center  items-center">
+  <div class="border mr-3 w-1/2"></div>
+  <h1 class="text-white  text-sm">OR</h1>
+  <div class="border ml-3 w-1/2"></div>
+</div>
+</a>
         </div>
-        </div>
+</div>
             <!-- Modal header -->
             <div class="flex items-center justify-center   rounded-t dark:border-gray-600">
 
@@ -130,29 +131,98 @@
                 </button> -->
             </div>
             <!-- Modal body -->
-            <div class="p-4 md:p-5">
+            <div class="">
+                <form class="space-y-4" action="#">
+                  @csrf
+                  <div class="w-full gap-3 flex">
+                    <div>
+                    <label for="firstname" class="block mb-2 text-sm font-medium text-white">First Name</label>
+                    <input type="text" name="firstname" id="firstname" class="bg-transparent bg-[#464646] text-white text-sm block w-full p-2" placeholder="First Name">
+                    </div>
+                    <div>
+                    <label for="lastname" class="block mb-2 text-sm font-medium text-white">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" class="bg-transparent bg-[#464646] text-white text-sm block w-full p-2" placeholder="Last Name">
+                    </div>
+                  </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-white">Email Address</label>
+                        <input type="email" name="email" id="email" class=" bg-transparent text-white text-sm block w-full p-2" placeholder="Your Email" required />
+                    </div>
+                    <div>
+                      <label class="block mb-2 text-sm font-medium text-white" for="number">Mobile Number</label>
+                      <input type="number" name="number" id="number" class=" bg-transparent text-white text-sm block w-full p-2" placeholder="Your Email" required />
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" class=" bg-transparent bg-[#464646] text-white text-sm block w-full p-2 " required />
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-white">Verifikasi Password</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" class=" bg-transparent text-white text-sm block w-full p-2 " required />
+                    </div>
+                    <div class="w-full text-center">
+                    <button type="submit" class=" bg-white  font-medium rounded-sm text-sm px-5 py-2 text-center">Create an account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- Main modal -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden transition duration-300 ease-in-out fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full  max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-[#151515] p-12 rounded-lg shadow ">
+        <div class="">
+        <h1 class=" text-center font-bold text-3xl mb-8 text-white">Sign In</h1>
+        <div>
+          <a href="flex items-center">
+            <div class="px-6 sm:px-0 max-w-sm">
+    <button type="button" class=" w-full  bg-white hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-between mr-2 mb-2"><img class="w-4 h-4 mr-1" src="{{ asset('assets/img/google-icon.svg') }}" alt=""> Sign up with Google<div></div></button>
+</div>
+
+<div class="flex mt-3 justify-center  items-center">
+  <div class="border mr-3 w-1/2"></div>
+  <h1 class="text-white  text-sm">OR</h1>
+  <div class="border ml-3 w-1/2"></div>
+</div>
+</a>
+        </div>
+</div>
+            <!-- Modal header -->
+            <div class="flex items-center justify-center   rounded-t dark:border-gray-600">
+
+                <!-- <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button> -->
+            </div>
+            <!-- Modal body -->
+            <div class="">
                 <form class="space-y-4" action="#">
                   @csrf
                     <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:{{ asset('assets/img/landing1.png') }}-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
+                        <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
+                        <input type="email" name="email" id="email" class="bg-[#464646] border border-[#464646] bg-transparent text-white text-sm block w-full p-2.5" placeholder="Your Email" required />
                     </div>
                     <div>
-                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                        <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-[#464646] bg-transparent border border-[#464646] text-white text-sm block w-full p-2.5 " required />
                     </div>
                     <div class="flex justify-between">
                         <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-                            </div>
-                            <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                            <label for="remember" class="ms-2 text-sm font-medium text-white bg-transparent ">Remember me</label>
                         </div>
-                        <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                        <a href="#" class="text-sm text-white hover:underline ">Forgot Password?</a>
                     </div>
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
-                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                    <div class="w-full text-center">
+                    <button type="submit" class=" bg-white  font-medium rounded-sm text-sm px-5 py-2 text-center">Sign In</button>
+                    </div>
+                    <div class="text-sm text-center font-medium text-gray-500 dark:text-gray-300">
+                        Don't have account ? <a href="#" class="text-[#CF082D] underline ">Register</a>
                     </div>
                 </form>
             </div>
