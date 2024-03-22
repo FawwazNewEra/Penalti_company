@@ -252,7 +252,7 @@
     <div class="relative w-full">
       <img class="w-full" src="{{ asset('assets/img/foto2.png') }}" alt="">
       <h1 class="text-white mb-1 mt-4 font-semibold text-3xl">Classic Polo Shirt</h1>
-      <p class="text-white  mb-3 text-xl">Rp 128.000</p>
+      <p class="text-white  mb-3 text-xl">Rp 128.0000</p>
       <button class="px-3 text-xs py-1.5 font-semibold rounded-sm bg-white"><a href="">Buy Now</a></button>
       <span class="absolute right-[7vw] md:right-[20px] bottom-[50px]"><img class="w-[7vw] sm:w-[5vw] md:w-[5vw] lg:w-[3vw] xl:w-[3vw] 2xl:w-[1vw]" src="{{ asset('assets/img/vectorsave.svg') }}" alt=""></span>
     </div>
