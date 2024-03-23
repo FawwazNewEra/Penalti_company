@@ -150,7 +150,7 @@
                     </div>
                     <div>
                       <label class="block mb-2 text-sm font-medium text-white" for="number">Mobile Number</label>
-                      <input type="number" name="number" id="number" class=" bg-transparent text-white text-sm block w-full p-2" placeholder="Your Email" required />
+                      <input type="text" name="number" id="number" class=" bg-transparent text-white text-sm block w-full p-2" placeholder="Your Email" required />
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
@@ -247,25 +247,68 @@
       <h1 class="text-white mb-1 mt-4 font-semibold text-3xl">Classic Polo Shirt</h1>
       <p class="text-white  mb-3 text-xl">Rp 128.000</p>
       <button class="px-3 text-xs py-1.5 font-semibold rounded-sm bg-white">Buy Now</button>
-      <span class="absolute right-[7vw] md:right-[20px] bottom-[50px]"><img class="w-[7vw] sm:w-[5vw] md:w-[5vw] lg:w-[3vw] xl:w-[3vw] 2xl:w-[1vw]" src="{{ asset('assets/img/vectorsave.svg') }}" alt=""></span>
+      <button class="absolute right-[7vw] md:right-[20px] xl:bottom-[60px] bottom-[50px]"><img class="w-[7vw] sm:w-[5vw] md:w-[5vw] lg:w-[3vw] xl:w-[2vw] 2xl:w-[1vw]" src="{{ asset('assets/img/vectorsave.svg') }}" alt=""></button>
     </div>
     <div class="relative w-full">
       <img class="w-full" src="{{ asset('assets/img/foto2.png') }}" alt="">
       <h1 class="text-white mb-1 mt-4 font-semibold text-3xl">Classic Polo Shirt</h1>
       <p class="text-white  mb-3 text-xl">Rp 128.0000</p>
       <button class="px-3 text-xs py-1.5 font-semibold rounded-sm bg-white"><a href="">Buy Now</a></button>
-      <span class="absolute right-[7vw] md:right-[20px] bottom-[50px]"><img class="w-[7vw] sm:w-[5vw] md:w-[5vw] lg:w-[3vw] xl:w-[3vw] 2xl:w-[1vw]" src="{{ asset('assets/img/vectorsave.svg') }}" alt=""></span>
+      <button class="absolute right-[7vw] md:right-[20px] xl:bottom-[60px] bottom-[50px]"><img class="w-[7vw] sm:w-[5vw] md:w-[5vw] lg:w-[3vw] xl:w-[2vw] 2xl:w-[1vw]" src="{{ asset('assets/img/vectorsave.svg') }}" alt=""></button>
     </div>
   </div>
 </div>
 
-<div class="w-full bg-black h-min p-0 md:p-6 px-10">
+<div class="w-full bg-black  h-min p-0 md:p-6 px-10">
   <div class="h-[80vh] overflow-hidden w-full">
     <img style="object-position: 65% 10%;" class="object-cover mb-6 h-full w-full" src="{{ asset('assets/img/landing3.png') }}" alt="">
-    <div class="w-full text-center">
-    <h1 class="  text-white uppercase font-Font-Products  text-3xl">Striped jacquard t-shirt x casa josephine</h1>
-    <button class="px-3 text-xs py-1.5 font-semibold rounded-sm bg-white"><a class=" " href="">Shop now</a></button>
+  </div>
+  <div class=" mt-6 flex-col pb-6 flex items-center justify-center">
+    <h1 class=" text-white mb-3 text-center uppercase font-Font-Products  text-3xl">Striped jacquard t-shirt x <br>casa josephine</h1>
+    <button class="px-3 text-xs  py-1.5 font-semibold rounded-sm bg-white"><a class=" " href="">Shop now</a></button>
     </div>
+</div>
+
+<div class="w-full h-min p-6 px-10">
+  <div class="">
+  <h1 class="text-2xl mb-8 mt-5 ml-3 font-bold">Most Wanted</h1>
+  <div class="w-full flex mb-5 justify-center items-center">
+    <button class="relative">
+      <img class="" src="{{ asset('assets/img/Button-baju.svg')}}" alt="">
+      <img class="absolute right-[50px]" src="{{ asset('assets/img/segitiga.svg')}}" alt="">
+    </button>
+    <button><img src="{{ asset('assets/img/Button-celana.svg')}}" alt=""></button>
+  </div>
+  <div class=" md:flex gap-2 md:mt-0 mb-3 justify-evenly items-center">
+    <div class="relative md:mt-0 mb-3">
+      <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+      <img src="{{ asset('assets/img/baju.png') }}" alt="">
+      <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
+      <p class="font-semibold">Rp 130.000</p>
+      <button class="absolute mr-1 right-0 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+    </div>
+    <div class="relative md:mt-0 mb-3">
+    <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+      <img src="{{ asset('assets/img/baju.png') }}" alt="">
+      <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
+      <p class="font-semibold">Rp 130.000</p>
+      <button class="absolute mr-1 right-0 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+    </div>
+    <div class="relative md:mt-0 mb-3">
+    <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+      <img src="{{ asset('assets/img/baju.png') }}" alt="">
+      <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
+      <p class="font-semibold">Rp 130.000</p>
+      <button class="absolute mr-1 right-0 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+    </div>
+    <div class="relative md:mt-0 mb-3">
+    <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+      <img src="{{ asset('assets/img/baju.png') }}" alt="">
+      <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
+      <p class="font-semibold">Rp 130.000</p>
+      <button class="absolute mr-1 right-0 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+    </div>
+  </div>
   </div>
 </div>
 @endsection
