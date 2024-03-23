@@ -10,18 +10,10 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function login() {
-        if (auth()->check()) {
-            return redirect('welcome');
-      }else {
-           return redirect('/');
-      }
-    
-    }
-    public function authenticate(Request $request) {
+    public function login(Request $request) {
         $credentials = $request->only('email', 'password');
         if(Auth::attempt($credentials)) {
-            return redirect('index');
+            return redirect('/');
         }else {
             return redirect('/')->with('error_messege', 'wrong email or password');
         }
@@ -39,18 +31,22 @@ class AuthController extends Controller
     
     public function register(Request $request) {
         $request->validate([
-            'name' => 'min:2|max:10',
+            'firstname' => 'min:2|max:10',
+            'lastname' => 'min:2|max:10',
+            'number' => 'min:2|max:15',
             'email' => 'email|unique:users',
             'password' => 'min:2|confirmed',
         ]);
     
         User::create([
-            'name' => $request->input('name'),
+            'fisrtname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'number' => $request->input('number'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password'))
         ]);
     
-        return redirect('/');
+        return redirect('login');
     
     }
 }

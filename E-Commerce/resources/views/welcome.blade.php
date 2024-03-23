@@ -136,7 +136,7 @@
             </div>
             <!-- Modal body -->
             <div class="">
-                <form method="POST"  class="space-y-4" action="{{ url('register') }}">
+                <form method="POST" class="space-y-4" action="{{ route('register') }}">
                   @csrf
                   <div class="w-full gap-3 flex">
                     <div>
