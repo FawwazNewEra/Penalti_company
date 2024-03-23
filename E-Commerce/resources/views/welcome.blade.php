@@ -68,8 +68,12 @@
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
     <div class="gap-1 sm:gap-6 sm:flex flex">
-    <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button" class="text-white font-Font-Products bg-black border border-white font-medium rounded-lg text-sm px-2 sm:px-4 py-2 text-center"><a >Login</a></button>
+      @guest
+    <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button" class="text-white font-F  ont-Products bg-black border border-white font-medium rounded-lg text-sm px-2 sm:px-4 py-2 text-center"><a >Login</a></button>
     <button data-modal-target="modal-register" data-modal-toggle="modal-register" type="button" class="text-black bg-white font-Font-Products font-medium rounded-lg text-sm px-2 sm:px-4  py-2 text-center"><a>Sign up</a></button>
+    @else
+    <h1>terlogin</h1>
+    @endguest 
     </div>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -132,7 +136,7 @@
             </div>
             <!-- Modal body -->
             <div class="">
-                <form class="space-y-4" action="#">
+                <form method="POST"  class="space-y-4" action="{{ url('register') }}">
                   @csrf
                   <div class="w-full gap-3 flex">
                     <div>
@@ -202,7 +206,7 @@
             </div>
             <!-- Modal body -->
             <div class="">
-                <form class="space-y-4" action="#">
+                <form class="space-y-4" action="{{route('login')}}" method="POST">
                   @csrf
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
