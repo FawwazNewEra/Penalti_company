@@ -273,7 +273,7 @@
     </div>
 </div>
 
-<div class="w-full h-min p-6 px-10">
+<div class="  h-min p-6 px-10">
   <div class="">
   <h1 class="text-2xl mb-8 mt-5 ml-3 font-bold">Most Wanted</h1>
   <div class="w-full flex mb-5 justify-center items-center">
@@ -283,30 +283,30 @@
     </button>
     <button><img src="{{ asset('assets/img/Button-celana.svg')}}" alt=""></button>
   </div>
-  <div class=" md:flex gap-2 md:mt-0 mb-3 justify-evenly items-center">
-    <div class="relative md:mt-0 mb-3">
-      <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+  <div class="flex flex-wrap gap-2 md:mt-0 mb-3 justify-evenly items-center">
+    <div class="relative w-[302px] md:mt-0 mb-3">
+    <button><img class="absolute bottom-[80px] right-[150px]" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
       <img src="{{ asset('assets/img/baju.png') }}" alt="">
       <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
       <p class="font-semibold">Rp 130.000</p>
-      <button class="absolute mr-1 right-0 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+      <button class="absolute mr-1 right-0 mt-1 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
     </div>
-    <div class="relative md:mt-0 mb-3">
-    <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+    <div class="relative w-[302px] md:mt-0 mb-3">
+    <button><img class="absolute bottom-[80px] right-[150px] " src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
       <img src="{{ asset('assets/img/baju.png') }}" alt="">
       <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
       <p class="font-semibold">Rp 130.000</p>
-      <button class="absolute mr-1 right-0 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+      <button class="absolute mr-1 right-0 mt-1 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
     </div>
-    <div class="relative md:mt-0 mb-3">
-    <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+    <div class="relative w-[302px] md:mt-0 mb-3">
+    <button><img class="absolute bottom-[80px] right-[150px]" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
       <img src="{{ asset('assets/img/baju.png') }}" alt="">
       <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
       <p class="font-semibold">Rp 130.000</p>
-      <button class="absolute mr-1 right-0 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+      <button class="absolute mr-1 right-0 mt-1 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
     </div>
-    <div class="relative md:mt-0 mb-3">
-    <button><img class="absolute bottom-[80px] right-1/2" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
+    <div class="relative w-[302px] md:mt-0 mb-3">
+    <button><img class="absolute bottom-[80px] mt-1 right-[150px]" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
       <img src="{{ asset('assets/img/baju.png') }}" alt="">
       <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
       <p class="font-semibold">Rp 130.000</p>
@@ -315,4 +315,67 @@
   </div>
   </div>
 </div>
+
+
+
+<footer class="bg-[#222222]">
+    <div class="mx-auto w-full max-w-screen-xl">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Pinalti Company</h2>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Shop</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Shirt</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Tshirt</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Pants</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Accesories</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Tentang Pinalti</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Cara Pesan</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Hubungi Kami</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Pusat Bantuan</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Tentang Kami</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Follow Us</h2>
+            <ul class="text-gray-500 flex gap-3 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/instagram.svg')}}" alt=""></a>
+                </li>
+                <li class="mb-4">
+                <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/twitter.svg')}}" alt=""></a>
+                </li>
+                <li class="mb-4">
+                <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/youtube.svg')}}" alt=""></a>
+                </li>
+                <li class="mb-4">
+                <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/facebook.svg')}}" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 @endsection
