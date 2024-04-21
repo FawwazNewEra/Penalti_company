@@ -12,10 +12,10 @@ class AuthController extends Controller
 {
     public function login(Request $request) {
         $credentials = $request->only('email', 'password');
-        if(Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)) {
             return redirect('/');
-        }else {
-            return redirect('/')->with('error_messege', 'wrong email or password');
+        }else{
+            return redirect('/')->with('error_messege', 'wrong email or pasword');
         }
     }
     
@@ -31,22 +31,22 @@ class AuthController extends Controller
     
     public function register(Request $request) {
         $request->validate([
-            'firstname' => 'min:2|max:10',
-            'lastname' => 'min:2|max:10',
-            'number' => 'min:2|max:15',
-            'email' => 'email|unique:users',
-            'password' => 'min:2|confirmed',
+        'firstname' => 'required|string|min:2|max:50',
+        'lastname' => 'required|string|min:2|max:50',
+        'email' => 'required|email|unique:users,email',
+        'number' => 'required|string|min:2|max:15',
+        'password' => 'required|string|min:8|confirmed',
         ]);
     
         User::create([
-            'fisrtname' => $request->input('firstname'),
-            'lastname' => $request->input('lastname'),
-            'number' => $request->input('number'),
-            'email' => $request->input('email'),
-            'password' => Hash::make($request->input('password'))
+        'firstname' => $request->input('firstname'),
+        'lastname' => $request->input('lastname'),
+        'email' => $request->input('email'),
+        'number' => $request->input('number'),
+        'password' => Hash::make($request->input('password'))
         ]);
     
-        return redirect('login');
+        return redirect()->route('/');
     
     }
 }

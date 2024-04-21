@@ -9,6 +9,10 @@
 
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="absolute z-30 top-[40vh] text-center left-[32vw] md:top-[32vh]">
+              <h1 class="text-[6vw] w-full text-white font-Font-Products">New Arrivals</h1>
+              <button class="bg-white opacity-80 font-bold px-4 py-2 rounded-md">Shop now</button>
+    </div>
             <img src="{{ asset('assets/img/landing1.png') }}" class="w-full object-cover  h-full" alt="...">
         </div>
 
@@ -54,10 +58,7 @@
             <span class="sr-only">Next</span>
         </span>
     </button>
-    <div class="absolute z-30 top-[40vh] text-center left-[32vw] md:top-[32vh]">
-              <h1 class="text-[6vw] w-full text-white font-Font-Products">New Arrivals</h1>
-              <button class="bg-white opacity-80 font-bold px-4 py-2 rounded-md">Shop now</button>
-    </div>
+    
 </div>
 
 
@@ -136,7 +137,7 @@
             </div>
             <!-- Modal body -->
             <div class="">
-                <form method="POST" class="space-y-4" action="{{ route('register') }}">
+                <form class="space-y-4" action="{{route('register')}}" method="POST">
                   @csrf
                   <div class="w-full gap-3 flex">
                     <div>
@@ -161,8 +162,8 @@
                         <input type="password" name="password" id="password" placeholder="••••••••" class=" bg-transparent bg-[#464646] text-white text-sm block w-full p-2 " required />
                     </div>
                     <div>
-                        <label for="password" class="block mb-2 text-sm font-medium text-white">Verifikasi Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class=" bg-transparent text-white text-sm block w-full p-2 " required />
+                        <label for="password_confirmation" class="block mb-2 text-sm font-medium text-white">Verifikasi Password</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="••••••••" class=" bg-transparent text-white text-sm block w-full p-2 " required />
                     </div>
                     <div class="w-full text-center">
                     <button type="submit" class=" bg-white  font-medium rounded-sm text-sm px-5 py-2 text-center">Create an account</button>
@@ -316,66 +317,9 @@
   </div>
 </div>
 
+@include('components.footer')
 
 
-<footer class="bg-[#222222]">
-    <div class="mx-auto w-full max-w-screen-xl">
-      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-        <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Pinalti Company</h2>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Shop</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Shirt</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Tshirt</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Pants</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Accesories</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Tentang Pinalti</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Cara Pesan</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Hubungi Kami</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Pusat Bantuan</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Tentang Kami</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Follow Us</h2>
-            <ul class="text-gray-500 flex gap-3 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/instagram.svg')}}" alt=""></a>
-                </li>
-                <li class="mb-4">
-                <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/twitter.svg')}}" alt=""></a>
-                </li>
-                <li class="mb-4">
-                <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/youtube.svg')}}" alt=""></a>
-                </li>
-                <li class="mb-4">
-                <a href="#" class=""><img class="w-7 " src="{{ asset('assets/img/facebook.svg')}}" alt=""></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
+
 
 @endsection
