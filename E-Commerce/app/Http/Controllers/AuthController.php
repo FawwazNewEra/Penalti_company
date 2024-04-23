@@ -45,7 +45,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->input('password'))
         ]);
     
-        return redirect()->route('welcome'); // Assuming you have a route named 'welcome' for your homepage
+        return redirect('/'); // Assuming you have a route named 'welcome' for your homepage
     }
     
 }
