@@ -20,33 +20,32 @@ class AuthController extends Controller
     }
     
     public function logout() {
-        Session::flush();
-        Auth::logout();
-        
+        Auth::logout(); // This will clear the authenticated user's session
     
-        return redirect('/');
+        return redirect('/'); // Redirect to the homepage or any desired page after logout
     }
+    
     
 
     
     public function register(Request $request) {
         $request->validate([
-        'firstname' => 'required|string|min:2|max:50',
-        'lastname' => 'required|string|min:2|max:50',
-        'email' => 'required|email|unique:users,email',
-        'number' => 'required|string|min:2|max:15',
-        'password' => 'required|string|min:8|confirmed',
+            'firstname' => 'required|string|min:2|max:50',
+            'lastname' => 'required|string|min:2|max:50',
+            'email' => 'required|email|unique:users,email',
+            'number' => 'required|string|min:2|max:15', // Adjust the maximum length as needed
+            'password' => 'required|string|min:8|confirmed',
         ]);
     
         User::create([
-        'firstname' => $request->input('firstname'),
-        'lastname' => $request->input('lastname'),
-        'email' => $request->input('email'),
-        'number' => $request->input('number'),
-        'password' => Hash::make($request->input('password'))
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'email' => $request->input('email'),
+            'number' => $request->input('number'),
+            'password' => Hash::make($request->input('password'))
         ]);
     
-        return redirect()->route('/');
-    
+        return redirect()->route('welcome'); // Assuming you have a route named 'welcome' for your homepage
     }
+    
 }
