@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,4 +31,11 @@ Route::get('/admin_panel', [AdminController::class,'index']);
 Route::get('/admin_panel/product', [AdminController::class,'product']);
 Route::get('/admin_panel/user', [AdminController::class,'user']);
 Route::get('/admin_panel/setting', [AdminController::class,'setting']);
+
+Route::middleware([IsAdmin::class])->group(function () {
+    Route::get('/indexProduct', [ProductsController::class, 'index']);
+    Route::get('/indexProduct/create', [ProductsController::class, 'create']);
+    Route::post('/indexProduct', [ProductsController::class, 'store']);
+});
+
 
