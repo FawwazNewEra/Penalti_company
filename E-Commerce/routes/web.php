@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
@@ -25,7 +26,12 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/register', [AuthController::class, 'register']);
 
-// Admin Product
+
+Route::get('/admin_panel', [AdminController::class,'index']);
+Route::get('/admin_panel/product', [AdminController::class,'product']);
+Route::get('/admin_panel/user', [AdminController::class,'user']);
+Route::get('/admin_panel/setting', [AdminController::class,'setting']);
+
 Route::middleware([IsAdmin::class])->group(function () {
     Route::get('/indexProduct', [ProductsController::class, 'index']);
     Route::get('/indexProduct/create', [ProductsController::class, 'create']);
