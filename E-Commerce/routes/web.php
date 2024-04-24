@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -22,4 +23,10 @@ Route::get('/', function () {
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/register', [AuthController::class, 'register']);
+
+
+Route::get('/admin_panel', [AdminController::class,'index']);
+Route::get('/admin_panel/product', [AdminController::class,'product']);
+Route::get('/admin_panel/user', [AdminController::class,'user']);
+Route::get('/admin_panel/setting', [AdminController::class,'setting']);
 
