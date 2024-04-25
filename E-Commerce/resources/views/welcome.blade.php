@@ -277,20 +277,22 @@
 <div class="  h-min p-6 px-10">
   <div class="">
   <h1 class="text-2xl mb-8 mt-5 ml-3 font-bold">Most Wanted</h1>
-  <div class="w-full flex mb-5 justify-center items-center">
+  <div class="w-full flex mb-5 gap-3 justify-center items-center">
     <button class="relative">
-      <img class="" src="{{ asset('assets/img/Button-baju.svg')}}" alt="">
+      <a href=""><button class="px-8 bg-black rounded-lg py-2 text-white">Tshirt</button></a>
       <img class="absolute right-[50px]" src="{{ asset('assets/img/segitiga.svg')}}" alt="">
     </button>
-    <button><img src="{{ asset('assets/img/Button-celana.svg')}}" alt=""></button>
+    <a href=""><button class="px-8 bg-white rounded-lg py-2 text-black border border-black ">Pants</button></a>
   </div>
   <div class="flex flex-wrap gap-2 md:mt-0 mb-3 justify-evenly items-center">
     <div class="relative w-[302px] md:mt-0 mb-3">
+ 
     <button><img class="absolute bottom-[80px] right-[150px]" src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
-      <img src="{{ asset('assets/img/baju.png') }}" alt="">
+      <a href=""><img src="{{ asset('assets/img/baju.png') }}" alt=""></a>
       <h1 class="font-semibold mt-2 text-[2vw] sm:text-[1vw] md:text-[1vw]">Regular Fit Jacquard-knit Polo Shirt</h1>
       <p class="font-semibold">Rp 130.000</p>
       <button class="absolute mr-1 right-0 mt-1 md:right-[20px]  bottom-[10px]"><img class="w-[5vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1.5vw] 2xl:w-[1.5vw]" src="{{ asset('assets/img/vectorsave-black.svg') }}" alt=""></button>
+
     </div>
     <div class="relative w-[302px] md:mt-0 mb-3">
     <button><img class="absolute bottom-[80px] right-[150px] " src="{{ asset('assets/img/plus.svg')}}" alt=""></button>
